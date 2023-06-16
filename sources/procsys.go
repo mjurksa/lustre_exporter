@@ -92,7 +92,7 @@ func (s *lustreProcSysSource) generateLNETTemplates(filter string) {
 
 func newLustreProcSysSource() LustreSource {
 	var l lustreProcSysSource
-	l.basePath = filepath.Join(ProcLocation, "sys")
+	l.basePath = filepath.Join("sys", "kernel" , "debug")
 	if LnetEnabled != disabled {
 		l.generateLNETTemplates(LnetEnabled)
 	}
